@@ -1,0 +1,25 @@
+{
+  "name": "template-website-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pythonpizza/template-website-v2.git",
+  "author": "Marco Acierno <marcoaciernoemail@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "theme-ui": "^0.3.5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.19",
+    "@types/react": "^17.0.0",
+    "@types/theme-ui": "^0.3.7",
+    "typescript": "^4.1.3"
+  }
+}
