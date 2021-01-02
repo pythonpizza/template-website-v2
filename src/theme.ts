@@ -1,0 +1,64 @@
+export const theme = {
+  fonts: {
+    body: "'Open Sans', sans-serif",
+    heading: "'Roboto Mono', sans-serif",
+  },
+  space: {
+    primary: "50px",
+    secondary: "20px",
+  },
+  sizes: {
+    container: "960px",
+    smallContainer: "720px",
+  },
+  colors: {
+    text: "#464444",
+    background: "#fff",
+    primary: "#ed4337",
+    white: "#fff",
+  },
+  fontSizes: {
+    large: "80px",
+    heading: "35px",
+    body: "20px",
+  },
+  fontWeights: {
+    body: 300,
+    heading: 500,
+    bold: 500,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.3,
+  },
+  text: {
+    heading: {
+      color: "primary",
+      fontFamily: "heading",
+      fontSize: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
+      mb: "secondary",
+    },
+  },
+  styles: {
+    root: {
+      fontFamily: "body",
+      fontSize: "body",
+      lineHeight: "body",
+      fontWeight: "body",
+    },
+  },
+  layout: {
+    container: {
+      px: "secondary",
+    },
+    center: {
+      variant: "container",
+      textAlign: "center",
+    },
+    smallContainer: {
+      maxWidth: "smallContainer",
+    },
+  },
+};
