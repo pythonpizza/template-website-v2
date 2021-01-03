@@ -7,7 +7,7 @@ export const Schedule = () => (
       <Heading>Schedule</Heading>
       <Paragraph>The schedule is displayed in</Paragraph>
 
-      <ScheduleCard />
+      <ScheduleCard variant="info" />
       <ScheduleCard />
       <ScheduleCard />
     </Container>
