@@ -70,13 +70,14 @@ export const theme = {
   layout: {
     container: {
       px: "secondary",
-    },
-    center: {
       textAlign: "center",
+      py: "50px",
     },
     smallContainer: {
       maxWidth: "smallContainer",
       px: "secondary",
+      textAlign: "center",
+      py: "50px",
     },
   },
 };
