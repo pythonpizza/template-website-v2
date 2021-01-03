@@ -8,6 +8,10 @@ export const Schedule = () => (
 
     <ScheduleCard variant="info" />
     <ScheduleCard />
+    <ScheduleCard invert />
     <ScheduleCard />
+    <ScheduleCard invert />
+    <ScheduleCard />
+    <ScheduleCard invert />
   </Container>
 );

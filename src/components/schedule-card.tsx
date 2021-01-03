@@ -5,20 +5,33 @@ import { Avatar } from "./avatar";
 
 type Props = {
   variant?: "talk" | "info";
+  invert?: boolean;
 };
 
-const TalkCard: React.FC = () => (
+const TalkCard: React.FC<{ invert: Props["invert"] }> = ({ invert }) => (
   <Card
     sx={{
       minHeight: "128px",
-      p: ["32px 40px 20px", "20px 100px 20px 160px"],
+      p: [
+        "32px 40px 20px",
+        invert ? "20px 170px 20px 100px" : "20px 100px 20px 170px",
+      ],
     }}
   >
-    <Avatar />
+    <Avatar
+      sx={{
+        position: "absolute",
+        top: [0, "50%"],
+        left: invert ? ["50%", "auto"] : ["50%", 0],
+        right: invert ? ["50%", 0] : "auto",
+        transform: ["translate(-50%,-75%) scale(1)", "translateY(-50%)"],
+      }}
+    />
 
     <Heading
       as="h2"
       sx={{
+        mt: 0,
         mb: ["10px", "5px"],
         fontSize: "body",
         color: "text",
@@ -75,13 +88,16 @@ const InfoCard: React.FC = () => (
   </Card>
 );
 
-export const ScheduleCard: React.FC<Props> = ({ variant = "talk" }) => (
+export const ScheduleCard: React.FC<Props> = ({
+  variant = "talk",
+  invert = false,
+}) => (
   <Box
     sx={{
       mt: variant === "talk" ? ["90px", "primary"] : "primary",
     }}
   >
-    {variant === "talk" && <TalkCard />}
+    {variant === "talk" && <TalkCard invert={invert} />}
     {variant === "info" && <InfoCard />}
   </Box>
 );

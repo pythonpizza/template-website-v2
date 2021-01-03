@@ -56,7 +56,7 @@ export const theme = {
       fontSize: "heading",
       fontWeight: "heading",
       lineHeight: "heading",
-      mb: "secondary",
+      my: "secondary",
     },
   },
   styles: {
