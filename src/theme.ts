@@ -21,6 +21,7 @@ export const theme = {
     large: "80px",
     heading: "35px",
     body: "20px",
+    smallBody: "16px",
   },
   fontWeights: {
     body: 300,
@@ -41,7 +42,6 @@ export const theme = {
       flexDirection: "column",
 
       padding: 2,
-      mt: "primary",
       borderRadius: "100px",
       boxShadow: "0 4px 28px -8px #cac9c9",
     },
@@ -72,11 +72,11 @@ export const theme = {
       px: "secondary",
     },
     center: {
-      variant: "container",
       textAlign: "center",
     },
     smallContainer: {
       maxWidth: "smallContainer",
+      px: "secondary",
     },
   },
 };
