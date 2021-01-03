@@ -53,11 +53,15 @@ export const Hero = () => (
         m: "auto",
       }}
     >
-      <HeroHeading as="h1" large mb={"secondary"}>
+      <HeroHeading as="h1" large>
         Python Pizza
       </HeroHeading>
-      <HeroHeading as="h2">CityName @ Venue</HeroHeading>
-      <HeroHeading as="h2">9 November 2019</HeroHeading>
+      <HeroHeading mb={0} as="h2">
+        CityName @ Venue
+      </HeroHeading>
+      <HeroHeading mb={0} as="h2">
+        9 November 2019
+      </HeroHeading>
     </Box>
     <Wave />
   </Flex>

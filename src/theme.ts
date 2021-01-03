@@ -28,8 +28,26 @@ export const theme = {
     bold: 500,
   },
   lineHeights: {
-    body: 1.5,
+    body: 1.3,
     heading: 1.3,
+  },
+  cards: {
+    primary: {
+      position: "relative",
+
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+
+      padding: 2,
+      mt: "primary",
+      borderRadius: "100px",
+      boxShadow: "0 4px 28px -8px #cac9c9",
+    },
+  },
+  radii: {
+    primary: "8px",
   },
   text: {
     heading: {
