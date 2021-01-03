@@ -94,10 +94,28 @@ export const ScheduleCard: React.FC<Props> = ({
 }) => (
   <Box
     sx={{
+      position: "relative",
       mt: variant === "talk" ? ["90px", "primary"] : "primary",
     }}
   >
     {variant === "talk" && <TalkCard invert={invert} />}
     {variant === "info" && <InfoCard />}
+
+    <Text
+      sx={{
+        position: "absolute",
+        top: ["-30px", "50%"],
+        left: invert ? ["50px", "20px"] : ["50px", "calc(100% - 20px)"],
+        transform: [
+          null,
+          invert
+            ? "translateY(-50%) translateX(0)"
+            : "translateY(-50%) translateX(-100%)",
+        ],
+        color: variant === "info" ? ["text", "white"] : "text",
+      }}
+    >
+      10:30
+    </Text>
   </Box>
 );
