@@ -2,13 +2,18 @@
 /** @jsx jsx */
 import { Box, jsx } from "theme-ui";
 
-export const Wave = () => (
+type Props = {
+  invert?: boolean;
+};
+
+export const Wave: React.FC<Props> = ({ invert = false }) => (
   <Box
     sx={{
       width: "100%",
       margin: "auto 0 0",
       overflow: "hidden",
       zIndex: 2,
+      transform: invert ? "scale(-1)" : "",
     }}
   >
     <svg
