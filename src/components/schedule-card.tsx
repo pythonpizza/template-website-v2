@@ -2,13 +2,19 @@
 /** @jsx jsx */
 import { jsx, Box, Card, Heading, Text } from "theme-ui";
 import { Avatar } from "./avatar";
+import { Event } from "~/data/schedule";
+import { format } from "date-fns";
 
 type Props = {
   variant?: "talk" | "info";
   invert?: boolean;
+  schedule: Event;
 };
 
-const TalkCard: React.FC<{ invert: Props["invert"] }> = ({ invert }) => (
+const TalkCard: React.FC<{
+  invert: Props["invert"];
+  schedule: Props["schedule"];
+}> = ({ invert, schedule }) => (
   <Card
     sx={{
       minHeight: "128px",
@@ -19,6 +25,7 @@ const TalkCard: React.FC<{ invert: Props["invert"] }> = ({ invert }) => (
     }}
   >
     <Avatar
+      src={schedule.photo}
       sx={{
         position: "absolute",
         top: [0, "50%"],
@@ -37,7 +44,7 @@ const TalkCard: React.FC<{ invert: Props["invert"] }> = ({ invert }) => (
         color: "text",
       }}
     >
-      Codice Ratio: mining nell'Archivio Segreto Vaticano
+      {schedule.title}
     </Heading>
 
     <Text
@@ -45,12 +52,12 @@ const TalkCard: React.FC<{ invert: Props["invert"] }> = ({ invert }) => (
         fontSize: ["smallBody", "body"],
       }}
     >
-      Speaker name
+      {schedule.name}
     </Text>
   </Card>
 );
 
-const InfoCard: React.FC = () => (
+const InfoCard: React.FC<{ schedule: Props["schedule"] }> = ({ schedule }) => (
   <Card
     sx={{
       p: "20px 100px",
@@ -83,7 +90,7 @@ const InfoCard: React.FC = () => (
         fontSize: "body",
       }}
     >
-      Info here
+      {schedule.label}
     </Text>
   </Card>
 );
@@ -91,6 +98,7 @@ const InfoCard: React.FC = () => (
 export const ScheduleCard: React.FC<Props> = ({
   variant = "talk",
   invert = false,
+  schedule,
 }) => (
   <Box
     sx={{
@@ -98,24 +106,26 @@ export const ScheduleCard: React.FC<Props> = ({
       mt: variant === "talk" ? ["90px", "primary"] : "primary",
     }}
   >
-    {variant === "talk" && <TalkCard invert={invert} />}
-    {variant === "info" && <InfoCard />}
+    {variant === "talk" && <TalkCard schedule={schedule} invert={invert} />}
+    {variant === "info" && <InfoCard schedule={schedule} />}
 
-    <Text
-      sx={{
-        position: "absolute",
-        top: ["-30px", "50%"],
-        left: invert ? ["50px", "20px"] : ["50px", "calc(100% - 20px)"],
-        transform: [
-          null,
-          invert
-            ? "translateY(-50%) translateX(0)"
-            : "translateY(-50%) translateX(-100%)",
-        ],
-        color: variant === "info" ? ["text", "white"] : "text",
-      }}
-    >
-      10:30
-    </Text>
+    {schedule.when && (
+      <Text
+        sx={{
+          position: "absolute",
+          top: ["-30px", "50%"],
+          left: invert ? ["50px", "20px"] : ["50px", "calc(100% - 20px)"],
+          transform: [
+            null,
+            invert
+              ? "translateY(-50%) translateX(0)"
+              : "translateY(-50%) translateX(-100%)",
+          ],
+          color: variant === "info" ? ["text", "white"] : "text",
+        }}
+      >
+        {format(new Date(schedule.when), "HH:mm")}
+      </Text>
+    )}
   </Box>
 );

@@ -3,7 +3,11 @@
 import { Box, jsx } from "theme-ui";
 import Image from "next/image";
 
-export const Avatar = (props) => (
+type Props = {
+  src: string;
+};
+
+export const Avatar: React.FC<Props> = ({ src, ...props }) => (
   <Box
     sx={{
       width: ["80px", "144px"],
@@ -21,7 +25,7 @@ export const Avatar = (props) => (
         overflow: "hidden",
       }}
       layout="fill"
-      src="/speakers/test-image.jpg"
+      src={src}
     />
   </Box>
 );
