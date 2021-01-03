@@ -1,24 +1,26 @@
-import { Container, Heading } from "theme-ui";
+import { Container, Heading, Paragraph } from "theme-ui";
 
 export const About = () => (
   <Container variant="center">
-    <Heading>Python Pizza</Heading>
     <Container variant="smallContainer">
-      <p>
+      <Heading>Python Pizza</Heading>
+      <Paragraph>
         <b>Python Pizza</b> is a micro conference organized by the Python
         Hamburg Community.
-      </p>
-      <p>
+      </Paragraph>
+      <Paragraph>
         We bring the Python Community together for some amazing original Pizza™
         and Python Talks.
-      </p>
-      <p>
+      </Paragraph>
+      <Paragraph>
         We believe in and encourage practical sessions, in which developers
         share their experience and lessons from real-world projects, each talk
         is 10 mins long.
-      </p>
-      <p>Thanks to the Python Pizza (Naples!) that started this format!</p>
-      <p>
+      </Paragraph>
+      <Paragraph>
+        Thanks to the Python Pizza (Naples!) that started this format!
+      </Paragraph>
+      <Paragraph>
         Check out the past editions:{" "}
         <a
           href="https://python.pizza"
@@ -36,7 +38,7 @@ export const About = () => (
           Berlin Python Pizza
         </a>
         .{" "}
-      </p>
+      </Paragraph>
     </Container>
   </Container>
 );
