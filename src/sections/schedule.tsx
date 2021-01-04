@@ -3,7 +3,7 @@ import { ScheduleCard } from "~/components/schedule-card";
 import { SCHEDULE } from "~/data/schedule";
 
 export const Schedule = () => (
-  <Container variant="smallContainer">
+  <Container id="schedule" variant="smallContainer">
     <Heading>Schedule</Heading>
     <Paragraph>The schedule is displayed in your timezone</Paragraph>
 

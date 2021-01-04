@@ -26,7 +26,7 @@ export const SponsorItem: React.FC<SponsorProps> = ({ sponsor }) => (
 );
 
 export const Sponsors = () => (
-  <Container>
+  <Container id="sponsors">
     <Heading>Sponsors</Heading>
     <Grid columns={[1, 2, 2, 3]}>
       {SPONSORS.map((sponsor) => (
