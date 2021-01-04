@@ -31,6 +31,7 @@ export const Hero = () => (
       background: "url(/background.jpg) center / cover",
       minHeight: "100vh",
       position: "relative",
+      pt: ["370px", "200px", "140px"],
       "&:before": {
         content: '""',
         position: "absolute",
@@ -51,6 +52,7 @@ export const Hero = () => (
       sx={{
         zIndex: 1,
         m: "auto",
+        p: "secondary",
       }}
     >
       <HeroHeading as="h1" large>

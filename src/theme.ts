@@ -28,6 +28,14 @@ export const theme = {
     heading: 500,
     bold: 500,
   },
+  links: {
+    nav: {
+      userSelect: "none",
+      "&:hover": {
+        color: "white",
+      },
+    },
+  },
   lineHeights: {
     body: 1.3,
     heading: 1.3,

@@ -11,7 +11,7 @@ const CocHeading: React.FC<{ as: ElementType }> = ({ children, as }) => (
 );
 
 export const Coc = () => (
-  <Container sx={{ textAlign: "left" }} variant="smallContainer">
+  <Container id="coc" sx={{ textAlign: "left" }} variant="smallContainer">
     <Heading sx={{ textAlign: "center" }} as="h1">
       Code of conduct
     </Heading>

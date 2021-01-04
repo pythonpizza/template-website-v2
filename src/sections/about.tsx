@@ -1,7 +1,7 @@
 import { Container, Heading, Paragraph } from "theme-ui";
 
 export const About = () => (
-  <Container variant="smallContainer">
+  <Container id="about" variant="smallContainer">
     <Heading>Python Pizza</Heading>
     <Paragraph>
       <b>Python Pizza</b> is a micro conference organized by the Python Hamburg
