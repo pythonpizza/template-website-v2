@@ -23,7 +23,9 @@ export const Avatar: React.FC<Props> = ({ src, ...props }) => (
       sx={{
         borderRadius: "50%",
         overflow: "hidden",
+        backgroundColor: "primary",
       }}
+      objectFit="cover"
       layout="fill"
       src={src}
     />

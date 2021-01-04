@@ -11,11 +11,13 @@ export const About = () => (
       We bring the Python Community together for some amazing original Pizza™
       and Python Talks.
     </Paragraph>
+    <br />
     <Paragraph>
       We believe in and encourage practical sessions, in which developers share
       their experience and lessons from real-world projects, each talk is 10
       mins long.
     </Paragraph>
+    <br />
     <Paragraph>
       Thanks to the Python Pizza (Naples!) that started this format!
     </Paragraph>
