@@ -56,10 +56,10 @@ export const Hero = () => (
       <HeroHeading as="h1" large>
         Python Pizza
       </HeroHeading>
-      <HeroHeading mb={0} as="h2">
+      <HeroHeading m={0} as="h2">
         CityName @ Venue
       </HeroHeading>
-      <HeroHeading mb={0} as="h2">
+      <HeroHeading m={0} as="h2">
         9 November 2019
       </HeroHeading>
     </Box>
