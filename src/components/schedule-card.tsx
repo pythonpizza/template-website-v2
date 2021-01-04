@@ -4,6 +4,7 @@ import { Link, jsx, Box, Card, Heading, Text } from "theme-ui";
 import { Avatar } from "./avatar";
 import { Event } from "~/data/schedule";
 import { format } from "date-fns";
+import { ExternalLinkIcon } from "./external-link-icon";
 
 type Props = {
   variant?: "talk" | "info";
@@ -58,6 +59,7 @@ const TalkCard: React.FC<{
         }}
       >
         {schedule.name}
+        {schedule.link && <ExternalLinkIcon />}
       </AuthorElement>
     </Card>
   );
