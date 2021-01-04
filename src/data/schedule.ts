@@ -3,6 +3,7 @@ export type Event = {
   name?: string;
   title?: string;
   photo?: string;
+  link?: string;
   when?: string;
 };
 
@@ -32,5 +33,10 @@ export const SCHEDULE: Event[] = [
     title:
       "Storytelling for data scientists: 4 things to skyrocket 🚀 your presentation skills",
     photo: "/speakers/test-image.jpg",
+    link: "http://google.it",
+  },
+  {
+    label: "Closing 👋",
+    when: "12/31/2020 9:00:00 PM UTC",
   },
 ];

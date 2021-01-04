@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Card, Heading, Text } from "theme-ui";
+import { Link, jsx, Box, Card, Heading, Text } from "theme-ui";
 import { Avatar } from "./avatar";
 import { Event } from "~/data/schedule";
 import { format } from "date-fns";
@@ -14,48 +14,54 @@ type Props = {
 const TalkCard: React.FC<{
   invert: Props["invert"];
   schedule: Props["schedule"];
-}> = ({ invert, schedule }) => (
-  <Card
-    sx={{
-      minHeight: "128px",
-      p: [
-        "32px 40px 20px",
-        invert ? "20px 170px 20px 100px" : "20px 100px 20px 170px",
-      ],
-    }}
-  >
-    <Avatar
-      src={schedule.photo}
+}> = ({ invert, schedule }) => {
+  const AuthorElement = schedule.link ? Link : Text;
+  return (
+    <Card
       sx={{
-        position: "absolute",
-        top: [0, "50%"],
-        left: invert ? ["50%", "auto"] : ["50%", 0],
-        right: invert ? ["50%", 0] : "auto",
-        transform: ["translate(-50%,-75%) scale(1)", "translateY(-50%)"],
-      }}
-    />
-
-    <Heading
-      as="h2"
-      sx={{
-        mt: 0,
-        mb: ["10px", "5px"],
-        fontSize: "body",
-        color: "text",
+        minHeight: "128px",
+        p: [
+          "32px 40px 20px",
+          invert ? "20px 170px 20px 100px" : "20px 100px 20px 170px",
+        ],
       }}
     >
-      {schedule.title}
-    </Heading>
+      <Avatar
+        src={schedule.photo}
+        sx={{
+          position: "absolute",
+          top: [0, "50%"],
+          left: invert ? ["50%", "auto"] : ["50%", 0],
+          right: invert ? ["50%", 0] : "auto",
+          transform: ["translate(-50%,-75%) scale(1)", "translateY(-50%)"],
+        }}
+      />
 
-    <Text
-      sx={{
-        fontSize: ["smallBody", "body"],
-      }}
-    >
-      {schedule.name}
-    </Text>
-  </Card>
-);
+      <Heading
+        as="h2"
+        sx={{
+          mt: 0,
+          mb: ["10px", "5px"],
+          fontSize: "body",
+          color: "text",
+        }}
+      >
+        {schedule.title}
+      </Heading>
+
+      <AuthorElement
+        rel="noopener noreferrer"
+        target="_blank"
+        href={schedule.link}
+        sx={{
+          fontSize: ["smallBody", "body"],
+        }}
+      >
+        {schedule.name}
+      </AuthorElement>
+    </Card>
+  );
+};
 
 const InfoCard: React.FC<{ schedule: Props["schedule"] }> = ({ schedule }) => (
   <Card
