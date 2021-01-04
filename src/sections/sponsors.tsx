@@ -8,7 +8,7 @@ export const Sponsor = () => (
     <Image
       width={140}
       height="auto"
-      sx={{ objectFit: "contain" }}
+      objectFit="contain"
       src="/sponsors/python-italia.png"
     />
   </Box>
