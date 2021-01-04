@@ -2,27 +2,36 @@
 /** @jsx jsx */
 import Image from "next/image";
 import { jsx, Heading, Box, Container, Grid } from "theme-ui";
+import { SPONSORS, Sponsor } from "~/data/sponsors";
 
-export const Sponsor = () => (
-  <Box sx={{ position: "relative" }}>
+type SponsorProps = {
+  sponsor: Sponsor;
+};
+
+export const SponsorItem: React.FC<SponsorProps> = ({ sponsor }) => (
+  <a
+    href={sponsor.link}
+    rel="noopener noreferrer"
+    target="_blank"
+    sx={{ position: "relative" }}
+  >
     <Image
       width={140}
       height="auto"
       objectFit="contain"
-      src="/sponsors/python-italia.png"
+      src={sponsor.image}
+      alt={sponsor.name}
     />
-  </Box>
+  </a>
 );
 
 export const Sponsors = () => (
   <Container>
     <Heading>Sponsors</Heading>
     <Grid columns={[1, 2, 2, 3]}>
-      <Sponsor />
-      <Sponsor />
-      <Sponsor />
-      <Sponsor />
-      <Sponsor />
+      {SPONSORS.map((sponsor) => (
+        <SponsorItem sponsor={sponsor} />
+      ))}
     </Grid>
   </Container>
 );
