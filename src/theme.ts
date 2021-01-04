@@ -66,6 +66,14 @@ export const theme = {
       lineHeight: "body",
       fontWeight: "body",
     },
+    a: {
+      color: "text",
+      textDecoration: "none",
+      transition: "color .3s",
+      "&:hover": {
+        color: "primary",
+      },
+    },
   },
   layout: {
     container: {
