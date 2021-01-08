@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-export const ExternalLinkIcon: React.FC = ({ props }) => (
+export const ExternalLinkIcon: React.FC = (props) => (
   <svg
     width="1.8rem"
     height="1.8rem"
