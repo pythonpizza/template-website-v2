@@ -29,8 +29,8 @@ export const Sponsors = () => (
   <Container id="sponsors">
     <Heading mb="primary">Sponsors</Heading>
     <Grid columns={[1, 2, 2, 3]} gap="primary">
-      {SPONSORS.map((sponsor) => (
-        <SponsorItem sponsor={sponsor} />
+      {SPONSORS.map((sponsor, index) => (
+        <SponsorItem key={index} sponsor={sponsor} />
       ))}
     </Grid>
   </Container>
