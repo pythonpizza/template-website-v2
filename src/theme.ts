@@ -4,12 +4,12 @@ export const theme = {
     heading: "'Roboto Mono', sans-serif",
   },
   space: {
-    primary: "50px",
-    secondary: "20px",
+    primary: "5rem",
+    secondary: "2rem",
   },
   sizes: {
-    container: "960px",
-    smallContainer: "720px",
+    container: "96rem",
+    smallContainer: "72rem",
   },
   colors: {
     text: "#464444",
@@ -18,10 +18,10 @@ export const theme = {
     white: "#fff",
   },
   fontSizes: {
-    large: "80px",
-    heading: "35px",
-    body: "20px",
-    smallBody: "16px",
+    large: "8rem",
+    heading: "3.5rem",
+    body: "2rem",
+    smallBody: "1.6rem",
   },
   fontWeights: {
     body: 300,
@@ -50,12 +50,12 @@ export const theme = {
       flexDirection: "column",
 
       padding: 2,
-      borderRadius: "100px",
+      borderRadius: "10rem",
       boxShadow: "0 4px 28px -8px #cac9c9",
     },
   },
   radii: {
-    primary: "8px",
+    primary: ".8rem",
   },
   text: {
     heading: {
@@ -65,6 +65,9 @@ export const theme = {
       fontWeight: "heading",
       lineHeight: "heading",
       my: "secondary",
+    },
+    paragraph: {
+      maxWidth: "none !important",
     },
   },
   styles: {
@@ -87,13 +90,13 @@ export const theme = {
     container: {
       px: "secondary",
       textAlign: "center",
-      py: "50px",
+      py: "primary",
     },
     smallContainer: {
       maxWidth: "smallContainer",
       px: "secondary",
       textAlign: "center",
-      py: "50px",
+      py: "primary",
     },
   },
 };

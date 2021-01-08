@@ -41,8 +41,8 @@ export const Footer = () => (
           key={social.name}
         >
           <Image
-            width="35px"
-            height="35px"
+            width="3.5rem"
+            height="3.5rem"
             src={social.icon}
             alt={social.name}
           />

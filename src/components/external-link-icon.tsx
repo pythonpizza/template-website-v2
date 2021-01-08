@@ -4,11 +4,11 @@ import { jsx } from "theme-ui";
 
 export const ExternalLinkIcon: React.FC = ({ props }) => (
   <svg
-    width="18px"
-    height="18px"
+    width="1.8rem"
+    height="1.8rem"
     viewBox="0 0 70 73"
     fill="none"
-    sx={{ display: "inline-block", ml: "5px" }}
+    sx={{ display: "inline-block", ml: ".5rem" }}
     {...props}
   >
     <path d="M40.5 24H3V72H51V33" stroke="black" strokeWidth="5" />

@@ -31,7 +31,7 @@ export const Hero = () => (
       background: "url(/background.jpg) center / cover",
       minHeight: "100vh",
       position: "relative",
-      pt: ["370px", "200px", "140px"],
+      pt: ["37rem", "20rem", "14rem"],
       "&:before": {
         content: '""',
         position: "absolute",

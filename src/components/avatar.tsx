@@ -10,8 +10,8 @@ type Props = {
 export const Avatar: React.FC<Props> = ({ src, ...props }) => (
   <Box
     sx={{
-      width: ["80px", "144px"],
-      height: ["80px", "144px"],
+      width: ["8rem", "14.4rem"],
+      height: ["8rem", "14.4rem"],
       borderRadius: "50%",
       overflow: "hidden",
       boxShadow: "2px 8px 32px -8px #ed4337",
