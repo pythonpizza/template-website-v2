@@ -1,6 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import Image from "next/image";
+
+import { Image } from "~/components/image";
+
 import { Box, Container, jsx } from "theme-ui";
 import { Wave } from "./wave";
 
@@ -38,7 +40,12 @@ export const Footer = () => (
           href={social.link}
           key={social.name}
         >
-          <Image width={35} height={35} src={social.icon} alt={social.name} />
+          <Image
+            width="35px"
+            height="35px"
+            src={social.icon}
+            alt={social.name}
+          />
         </a>
       ))}
     </Container>

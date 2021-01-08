@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import Image from "next/image";
-import { jsx, Heading, Box, Container, Grid } from "theme-ui";
+import { jsx, Heading, Container, Grid } from "theme-ui";
+import { Image } from "~/components/image";
 import { SPONSORS, Sponsor } from "~/data/sponsors";
 
 type SponsorProps = {
@@ -16,7 +16,7 @@ export const SponsorItem: React.FC<SponsorProps> = ({ sponsor }) => (
     sx={{ position: "relative" }}
   >
     <Image
-      width={140}
+      width="140px"
       height="auto"
       objectFit="contain"
       src={sponsor.image}
@@ -28,7 +28,7 @@ export const SponsorItem: React.FC<SponsorProps> = ({ sponsor }) => (
 export const Sponsors = () => (
   <Container id="sponsors">
     <Heading>Sponsors</Heading>
-    <Grid columns={[1, 2, 2, 3]}>
+    <Grid columns={[1, 2, 2, 3]} gap="primary">
       {SPONSORS.map((sponsor) => (
         <SponsorItem sponsor={sponsor} />
       ))}
