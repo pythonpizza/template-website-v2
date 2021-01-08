@@ -119,6 +119,7 @@ export const ScheduleCard: React.FC<Props> = ({
 
     {schedule.when && (
       <Text
+        key="when"
         sx={{
           position: "absolute",
           top: ["-30px", "50%"],
