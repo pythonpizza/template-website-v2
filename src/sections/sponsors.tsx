@@ -16,7 +16,7 @@ export const SponsorItem: React.FC<SponsorProps> = ({ sponsor }) => (
     sx={{ position: "relative" }}
   >
     <Image
-      width="140px"
+      width="14rem"
       height="auto"
       objectFit="contain"
       src={sponsor.image}

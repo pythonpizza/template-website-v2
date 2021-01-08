@@ -29,7 +29,7 @@ const MenuLink: React.FC<{ href: string }> = ({ href, children }) => {
         background: `linear-gradient(0deg, #fff .2rem,transparent 0) no-repeat 50%`,
         transition: "background-size .3s cubic-bezier(.165,.84,.44,1)",
         backgroundSize: "0 100%",
-        p: "4px",
+        p: ".4rem",
         "&:hover": {
           backgroundSize: "100% 100%",
         },
@@ -47,8 +47,8 @@ const MenuLink: React.FC<{ href: string }> = ({ href, children }) => {
 const MenuButton: React.FC<{ href: string }> = ({ children, href }) => (
   <Box
     sx={{
-      perspective: "240px",
-      p: "4px",
+      perspective: "24rem",
+      p: ".4rem",
     }}
     mt={["secondary", 0]}
     ml={[0, "secondary"]}
@@ -58,9 +58,9 @@ const MenuButton: React.FC<{ href: string }> = ({ children, href }) => (
       target="_blank"
       rel="noopener noreferrer"
       sx={{
-        padding: "10px 24px",
+        padding: "1rem 2.4rem",
         border: "1px solid white",
-        borderRadius: "100px",
+        borderRadius: "10rem",
         background: "white",
         color: "primary",
         transition: `transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),

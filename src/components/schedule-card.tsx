@@ -20,10 +20,10 @@ const TalkCard: React.FC<{
   return (
     <Card
       sx={{
-        minHeight: "128px",
+        minHeight: "12.8rem",
         p: [
-          "32px 40px 20px",
-          invert ? "20px 170px 20px 100px" : "20px 100px 20px 170px",
+          "3.2rem 4rem 2rem",
+          invert ? "2rem 17rem 2rem 10rem" : "2rem 10rem 2rem 17rem",
         ],
       }}
     >
@@ -42,7 +42,7 @@ const TalkCard: React.FC<{
         as="h2"
         sx={{
           mt: 0,
-          mb: ["10px", "5px"],
+          mb: ["1rem", ".5rem"],
           fontSize: "body",
           color: "text",
         }}
@@ -68,7 +68,7 @@ const TalkCard: React.FC<{
 const InfoCard: React.FC<{ schedule: Props["schedule"] }> = ({ schedule }) => (
   <Card
     sx={{
-      p: "20px 100px",
+      p: "2rem 10rem",
       backgroundColor: "primary",
       color: "white",
       backgroundImage: `linear-gradient(
@@ -80,7 +80,7 @@ const InfoCard: React.FC<{ schedule: Props["schedule"] }> = ({ schedule }) => (
           transparent 75%,
           rgba(0, 0, 0, 0.05) 75%
         )`,
-      backgroundSize: "48px 48px",
+      backgroundSize: "4.8rem 4.8rem",
       backgroundRepeat: "repeat",
       animation: "bg-move 2s infinite linear",
       "@keyframes bg-move": {
@@ -88,7 +88,7 @@ const InfoCard: React.FC<{ schedule: Props["schedule"] }> = ({ schedule }) => (
           backgroundPositionX: 0,
         },
         "100%": {
-          backgroundPositionX: "48px",
+          backgroundPositionX: "4.8rem",
         },
       },
     }}
@@ -111,7 +111,7 @@ export const ScheduleCard: React.FC<Props> = ({
   <Box
     sx={{
       position: "relative",
-      mt: variant === "talk" ? ["90px", "primary"] : "primary",
+      mt: variant === "talk" ? ["9rem", "primary"] : "primary",
     }}
   >
     {variant === "talk" && <TalkCard schedule={schedule} invert={invert} />}
@@ -122,8 +122,8 @@ export const ScheduleCard: React.FC<Props> = ({
         key="when"
         sx={{
           position: "absolute",
-          top: ["-30px", "50%"],
-          left: invert ? ["50px", "20px"] : ["50px", "calc(100% - 20px)"],
+          top: ["-3rem", "50%"],
+          left: invert ? ["5rem", "2rem"] : ["5rem", "calc(100% - 2rem)"],
           transform: [
             null,
             invert
