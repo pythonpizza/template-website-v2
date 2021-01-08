@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { Box, jsx } from "theme-ui";
-import Image from "next/image";
+import { Image } from "~/components/image";
 
 type Props = {
   src: string;
@@ -27,6 +27,7 @@ export const Avatar: React.FC<Props> = ({ src, ...props }) => (
       }}
       objectFit="cover"
       layout="fill"
+      alt="Speaker photo"
       src={src}
     />
   </Box>
