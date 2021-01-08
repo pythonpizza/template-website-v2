@@ -31,7 +31,7 @@ export const theme = {
   links: {
     nav: {
       userSelect: "none",
-      "&:hover": {
+      "&:hover, &:focus": {
         color: "white",
       },
     },
