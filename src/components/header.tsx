@@ -113,7 +113,7 @@ export const Header = () => (
         <MenuLink href="#schedule">Schedule 📺</MenuLink>
         <MenuLink href="#sponsors">Sponsors 💕</MenuLink>
         <MenuLink href="#coc">CoC 💂</MenuLink>
-        <MenuButton href="http://google.it">Tickets</MenuButton>
+        <MenuButton href="http://google.it">Tickets 🎫</MenuButton>
       </Flex>
     </Container>
   </Box>
