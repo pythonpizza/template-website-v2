@@ -13,8 +13,8 @@ export const SCHEDULE: Event[] = [
     when: "12/31/2020 3:00:00 PM UTC",
   },
   {
-    name: "Marielle Dado",
-    title: "Python Pizza Pet 🐈 & Plant Parade 🪴!",
+    name: "Speaker 1",
+    title: "Talk title here for speaker 1",
     photo: "/speakers/test-image.jpg",
     when: "12/31/2020 5:00:00 PM UTC",
   },
@@ -23,15 +23,14 @@ export const SCHEDULE: Event[] = [
     when: "12/31/2020 6:00:00 PM UTC",
   },
   {
-    name: "Jason C. McDonald",
-    title: "Whose Method Is It Anyway 🪆 ?",
+    name: "Speaker 2",
+    title: "Talk title here for speaker 2",
     photo: "/speakers/test-image.jpg",
     when: "12/31/2020 7:00:00 PM UTC",
   },
   {
-    name: "Dr. Jing Xie",
-    title:
-      "Storytelling for data scientists: 4 things to skyrocket 🚀 your presentation skills",
+    name: "Speaker 3",
+    title: "Talk title here for speaker 3",
     photo: "/speakers/test-image.jpg",
     link: "http://google.it",
   },
