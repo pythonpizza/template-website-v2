@@ -1,4 +1,5 @@
 import { Box } from "theme-ui";
+
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import { About } from "~/sections/about";

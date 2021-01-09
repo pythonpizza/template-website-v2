@@ -1,9 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Link, jsx, Box, Card, Heading, Text } from "theme-ui";
-import { Avatar } from "./avatar";
-import { Event } from "~/data/schedule";
 import { format } from "date-fns";
+import { Box, Card, Heading, jsx, Link, Text } from "theme-ui";
+
+import { Event } from "~/data/schedule";
+
+import { Avatar } from "./avatar";
 import { ExternalLinkIcon } from "./external-link-icon";
 
 type Props = {

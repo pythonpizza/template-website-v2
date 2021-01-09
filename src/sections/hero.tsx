@@ -1,4 +1,5 @@
-import { Flex, Box, Heading, HeadingProps } from "theme-ui";
+import { Box, Flex, Heading, HeadingProps } from "theme-ui";
+
 import { Wave } from "~/components/wave";
 
 type HeroHeadingProps = HeadingProps & {

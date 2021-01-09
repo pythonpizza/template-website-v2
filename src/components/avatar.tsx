@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { Box, jsx } from "theme-ui";
+
 import { Image } from "~/components/image";
 
 type Props = {

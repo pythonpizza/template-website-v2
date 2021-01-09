@@ -1,7 +1,8 @@
-import { ThemeProvider } from "theme-ui";
+import { css, Global } from "@emotion/react";
 import type { AppProps } from "next/app";
+import { ThemeProvider } from "theme-ui";
+
 import { theme } from "~/theme";
-import { Global, css } from "@emotion/react";
 
 const App = ({ Component, pageProps }: AppProps) => (
   /* @ts-ignore */

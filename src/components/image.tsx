@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
 import React from "react";
+import { jsx } from "theme-ui";
 
 type Props = {
   width?: string;
@@ -10,7 +10,7 @@ type Props = {
   alt: string;
   objectFit?: "contain" | "cover";
   layout?: "fill";
-  sx?: object;
+  sx?: Record<string, unknown>;
   className?: string;
 };
 

@@ -1,9 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
+import { Box, Container, jsx } from "theme-ui";
+
 import { Image } from "~/components/image";
 
-import { Box, Container, jsx } from "theme-ui";
 import { Wave } from "./wave";
 
 const SOCIALS = [

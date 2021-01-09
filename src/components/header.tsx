@@ -1,5 +1,6 @@
 import { MouseEvent, useCallback } from "react";
-import { Container, Box, NavLink, Flex } from "theme-ui";
+import { Box, Container, Flex, NavLink } from "theme-ui";
+
 import { Logo } from "./logo";
 
 const MenuLink: React.FC<{ href: string }> = ({ href, children }) => {

@@ -1,8 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Heading, Container, Grid } from "theme-ui";
+import { Container, Grid, Heading, jsx } from "theme-ui";
+
 import { Image } from "~/components/image";
-import { SPONSORS, Sponsor } from "~/data/sponsors";
+import { Sponsor, SPONSORS } from "~/data/sponsors";
 
 type SponsorProps = {
   sponsor: Sponsor;

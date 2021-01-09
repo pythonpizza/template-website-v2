@@ -1,4 +1,5 @@
 import { Container, Heading, Paragraph } from "theme-ui";
+
 import { ScheduleCard } from "~/components/schedule-card";
 import { SCHEDULE } from "~/data/schedule";
 
@@ -12,7 +13,7 @@ export const Schedule = () => (
         variant={schedule.label ? "info" : "talk"}
         key={index}
         schedule={schedule}
-        invert={!Boolean(index % 2)}
+        invert={!(index % 2)}
       />
     ))}
   </Container>
