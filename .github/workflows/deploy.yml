@@ -1,0 +1,18 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch deploy request
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          event-type: prod_push
+          client-payload: '{"repository": "template-website-v2", "event": "template"}'
