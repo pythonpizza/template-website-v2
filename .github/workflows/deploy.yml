@@ -15,4 +15,5 @@ jobs:
         with:
           token: ${{ secrets.BOT_TOKEN }}
           event-type: prod_push
+          repository: pythonpizza/infrastructure
           client-payload: '{"repository": "template-website-v2", "event": "template"}'
