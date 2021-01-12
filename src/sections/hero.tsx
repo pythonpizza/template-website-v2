@@ -1,6 +1,8 @@
+import { format } from "date-fns";
 import { Box, Flex, Heading, HeadingProps } from "theme-ui";
 
 import { Wave } from "~/components/wave";
+import { genericInformation } from "~/data/generic";
 
 type HeroHeadingProps = HeadingProps & {
   large?: boolean;
@@ -57,13 +59,16 @@ export const Hero = () => (
       }}
     >
       <HeroHeading as="h1" large>
-        Python Pizza
+        {genericInformation.siteHeading}
       </HeroHeading>
       <HeroHeading m={0} as="h2">
-        CityName @ Venue
+        {genericInformation.subHeading}
       </HeroHeading>
       <HeroHeading m={0} as="h2">
-        9 November 2019
+        {format(
+          new Date(genericInformation.whenDatetime),
+          genericInformation.whenFormat
+        )}
       </HeroHeading>
     </Box>
     <Wave />

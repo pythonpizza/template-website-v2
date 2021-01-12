@@ -2,7 +2,7 @@ export const genericInformation = {
   pageTitle: "Python Pizza",
   socialDescription: "Python Pizza social",
   siteHeading: "Python Pizza City",
-  subHeading: "Naples @ PAN",
-  when: "15 August 2020",
-  whenDatetime: "15-05-2020T00:00Z",
+  subHeading: "City @ Venue",
+  whenDatetime: "2020/05/05 05:00 PM UTC",
+  whenFormat: "do MMMM Y",
 };
