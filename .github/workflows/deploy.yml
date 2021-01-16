@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.9.1"
       - name: Set IS_PR
-        run: echo "IS_PR=$(${{ github.event_name }} == "pull_request")" >> $GITHUB_ENV
+        run: echo "IS_PR=$("${{ github.event_name }}" == "pull_request")" >> $GITHUB_ENV
       - name: Download request deploy script
         run: |
           wget https://raw.githubusercontent.com/pythonpizza/infrastructure/main/script/request-deploy/request-deploy-setup.sh
