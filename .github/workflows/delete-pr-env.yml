@@ -1,0 +1,22 @@
+name: Delete PR environment
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete_pr_environment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.9.1"
+      - name: Delete environment script
+        run: |
+          wget https://raw.githubusercontent.com/pythonpizza/infrastructure/main/script/delete-environment/delete-environment-setup.sh
+          chmod +x ./delete-environment-setup.sh
+          ./delete-environment-setup.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          REPOSITORY_NAME: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.number }}
