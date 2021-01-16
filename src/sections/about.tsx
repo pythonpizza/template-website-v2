@@ -8,7 +8,7 @@ export const About = () => (
       Community.
     </Paragraph>
     <Paragraph>
-      Change A
+      Change B
     </Paragraph>
     <br />
     <Paragraph>
