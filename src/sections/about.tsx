@@ -8,7 +8,7 @@ export const About = () => (
       Community.
     </Paragraph>
     <Paragraph>
-      This is the change from the PR
+      Another change
     </Paragraph>
     <br />
     <Paragraph>
