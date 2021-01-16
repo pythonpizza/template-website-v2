@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Download request deploy script
         run: |
-          wget https://raw.githubusercontent.com/pythonpizza/infrastructure/script/request-deploy/request-deploy-setup.sh
+          wget https://raw.githubusercontent.com/pythonpizza/infrastructure/main/script/request-deploy/request-deploy-setup.sh
           chmod +x ./request-deploy-setup.sh
           ./request-deploy-setup.sh
         env:
