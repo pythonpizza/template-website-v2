@@ -8,8 +8,7 @@ export const About = () => (
       Community.
     </Paragraph>
     <Paragraph>
-      We bring the Python Community together for some amazing original Pizza™
-      and Python Talks.
+      Change B
     </Paragraph>
     <br />
     <Paragraph>
