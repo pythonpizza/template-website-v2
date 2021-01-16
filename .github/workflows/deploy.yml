@@ -25,3 +25,4 @@ jobs:
           SHA: ${{ github.sha }}
           REPOSITORY_NAME: ${{ github.event.repository.name }}
           PR_NUMBER: ${{ github.event.number }}
+          IS_PR: ${{ github.event_name == "pull_request" }}
