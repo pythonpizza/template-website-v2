@@ -15,8 +15,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: "3.9.1"
-      - name: Set IS_PR
-        run: echo "IS_PR=$("${{ github.event_name }}" == "pull_request")" >> $GITHUB_ENV
       - name: Download request deploy script
         run: |
           wget https://raw.githubusercontent.com/pythonpizza/infrastructure/main/script/request-deploy/request-deploy-setup.sh
@@ -27,4 +25,4 @@ jobs:
           SHA: ${{ github.sha }}
           REPOSITORY_NAME: ${{ github.event.repository.name }}
           PR_NUMBER: ${{ github.event.number }}
-          IS_PR: ${{ env.IS_PR }}
+          EVENT_NAME: ${{ github.event_name }}
