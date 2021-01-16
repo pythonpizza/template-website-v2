@@ -5,8 +5,8 @@ on:
     branches:
       - main
       - master
-    pull_request:
-      types: [synchronize]
+  pull_request:
+    types: [synchronize]
 
 jobs:
   deploy:
