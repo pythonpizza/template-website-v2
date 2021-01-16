@@ -5,20 +5,22 @@ on:
     branches:
       - main
       - master
+    pull_request:
+      branches:
+        - main
+        - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: bluwy/substitute-string-action@v1
-        id: event_name
-        with:
-          _input-text: ${{ github.event.repository.name }}
-          python.pizza: ""
-      - name: Dispatch deploy request
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.BOT_TOKEN }}
-          event-type: prod_push
-          repository: pythonpizza/infrastructure
-          client-payload: '{"repository": "${{ github.event.repository.name }}", "event": "${{ steps.event_name.outputs.result }}", "domain": "${{ steps.event_name.outputs.result }}", "sha": "${{ github.sha }}"}'
+      - name: Download request deploy script
+        run: |
+          wget https://raw.githubusercontent.com/pythonpizza/infrastructure/script/request-deploy/request-deploy-setup.sh
+          chmod +x ./request-deploy-setup.sh
+          ./request-deploy-setup.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+          SHA: ${{ github.sha }}
+          REPOSITORY_NAME: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.number }}
